@@ -4,9 +4,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define NUMB 1
-#define NAVI 2
-#define ADJUST 3
+#define NUM 1
+#define SYM 2
+#define NAV 3
+#define ADJUST 4
 
 &lt {
   tapping-term-ms = <300>;
@@ -66,14 +67,16 @@
 // '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
 //                                   |  GUI   |   MO1   |   ENT   |       |  SPC  |   BKSP  |  CAPS   |
 //                                   '--------+---------+---------'       '-------+---------+---------'
+
                         bindings = <
-   &kp ESC        &kp Q       &kp W      &kp E     &kp R      &kp T           &kp Y       &kp U           &kp I        &kp O     &kp P      &kp LBKT
-   &mt LCTRL TAB  &kp A       &kp S      &kp D     &kp F      &kp G           &kp H       &kp J           &kp K        &kp L     &kp SEMI   &kp SQT
-   &kp LSHFT      &kp Z       &kp X      &kp C     &kp V      &kp B           &kp N       &kp M           &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
-                  &kp LGUI    &mo 1      &lt NAVI RET         &kp SPACE       &kp BSPC    &kp CAPSLOCK
+   &mt LGUI GRAVE   &kp Q   &kp W   &kp E     &kp R               &kp T             &kp Y         &kp U               &kp I        &kp O     &kp P      &kp LBKT
+   &mt LCTRL TAB    &kp A   &kp S   &kp D     &kp F               &kp G             &kp H         &kp J               &kp K        &kp L     &kp SEMI   &kp SQT
+   &kp LALT         &kp Z   &kp X   &kp C     &kp V               &kp B             &kp N         &kp M               &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
+                                    &mo NUM   &mt LSHIFT SPACE    &lt SYM ESC       &lt SYM RET   &mt RSHIFT SPACE    &lt NUM BSPC
                         >;
                 };
-		
+
+
 lower_layer {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
 // |   ESC        |    1    |    2   |   3    |    4    |    5    |       |   6   |    7    |    8    |    9    |     0    |    `     |
@@ -91,7 +94,7 @@ lower_layer {
                                              &kp LGUI           &trans               &mo ADJUST        &kp KP_N1                &kp KP_N2                  &kp KP_N3
                         >;
                 };
-                
+
                 raise_layer {
 // .----------------------------------------------------------------.       .-----------------------------------------------------------------.
 // |   CMD+SHIFT+4  |       |   PU   |   UP   |    PD    |   HOME   |       |  HOME   |    PU    |    UP   |   PD    |          | CMD+SHIFT+4 |
