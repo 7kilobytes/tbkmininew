@@ -92,7 +92,7 @@
    &trans   &kp F12  &kp F7  &kp F8   &kp F9   &kp X            &kp PLUS    &kp N7    &kp N8   &kp N9    &kp ASTRK   &trans
    &trans   &kp F11  &kp F4  &kp F5   &kp F6   &kp X            &kp MINUS   &kp N4    &kp N5   &kp N6    &kp SLASH   &trans
    &trans   &kp F10  &kp F1  &kp F2   &kp F3   &kp X            &kp DOT     &kp N1    &kp N2   &kp N3    &kp N0      &trans
-                             &trans   &trans   &trans           &trans      &trans    &trans
+                             &mo NAV   &trans   &trans           &trans      &trans    &trans
                         >;
                 };
 
@@ -116,15 +116,15 @@
 //                };
 
                         bindings = <
-   &trans   &kp EXCL   &kp AT      &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET   &kp AMPS    &kp ASTRK   &kp PLUS    &kp MINUS   &trans
-   &trans   &kp DQT    &kp TILDE   &kp LBRC   &kp LPAR   &kp LBKT          &kp X       &kp CM_SCLN &kp SEMI    &kp EQUAL   &kp BSLH    &trans
-   &trans   &kp APOS   &kp GRAVE   &kp RBRC   &kp RPAR   &kp RBKT          &kp X       &kp PIPE    &kp LT      &kp GT      &kp QMARK   &trans
+   &trans   &kp EXCL   &kp AT      &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET   &kp AMPS    &kp ASTRK    &kp PLUS    &kp MINUS   &trans
+   &trans   &kp DQT    &kp TILDE   &kp LBRC   &kp LPAR   &kp LBKT          &kp X       &kp CM_COLN &kp CM_SCLN  &kp EQUAL   &kp BSLH    &trans
+   &trans   &kp APOS   &kp GRAVE   &kp RBRC   &kp RPAR   &kp RBKT          &kp X       &kp PIPE    &kp LT       &kp GT      &kp QMARK   &trans
                                    &trans     &trans     &trans            &trans      &trans      &trans
                         >;
                 };
 
 
-//                nav_layer {
+                nav_layer {
 // /--------------------------------------------------------\       /--------------------------------------------------------------\
 // |         |        |        |        |         |         |       |  VOL+  |        |         |         |          |             |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
@@ -143,5 +143,12 @@
 //                        >;
 //                };
 
+                        bindings = <
+   &trans   &none   &none   &none   &none   &none         &kp PG_UP     &kp LC(LEFT) &kp UP     &kp LC(RIGHT) &kp HOME   &trans
+   &trans   &none   &none   &none   &none   &none         &kp PG_DN     &kp LEFT     &kp DOWN   &kp RIGHT     &kp INS    &trans
+   &trans   &none   &none   &none   &none   &none         &caps_word    &none     &none      &none         &kp END    &trans
+                      &trans     &trans     &trans        &trans      &trans     &trans
+                        >;
+                };
     };
 };

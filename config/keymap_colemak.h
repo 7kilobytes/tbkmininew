@@ -63,19 +63,19 @@
 
 //Row 1
 #define CM_TILD S(CM_GRV)  // ~
-#define CM_EXLM S(CM_N1)    // !
-#define CM_AT   S(CM_N2)    // @
-#define CM_HASH S(CM_N3)    // #
-#define CM_DLR  S(CM_N4)    // $
-#define CM_PERC S(CM_N5)    // %
-#define CM_CIRC S(CM_N6)    // ^
-#define CM_AMPR S(CM_N7)    // &
-#define CM_ASTR S(CM_N8)    // *
-#define CM_LPRN S(CM_N9)    // (
-#define CM_RPRN S(CM_N0)    // )
+#define CM_EXLM S(CM_N1)   // !
+#define CM_AT   S(CM_N2)   // @
+#define CM_HASH S(CM_N3)   // #
+#define CM_DLR  S(CM_N4)   // $
+#define CM_PERC S(CM_N5)   // %
+#define CM_CIRC S(CM_N6)   // ^
+#define CM_AMPR S(CM_N7)   // &
+#define CM_ASTR S(CM_N8)   // *
+#define CM_LPRN S(CM_N9)   // (
+#define CM_RPRN S(CM_N0)   // )
 #define CM_UNDS S(CM_MINS) // _
 #define CM_PLUS S(CM_EQL)  // +
-#define CM_COLN S(CM_SCLN) // :
+#define CM_COLN LS(CM_SCLN) // :
 #define CM_LCBR S(CM_LBRC) // {
 #define CM_RCBR S(CM_RBRC) // }
 #define CM_PIPE S(CM_BSLS) // |
