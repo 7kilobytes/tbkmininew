@@ -38,16 +38,16 @@
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |   CTRL/Tab   |    A    |    S   |   D    |    F    |    G    |       |   H   |    J    |    K    |    L    |     ;    |     '    |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |   SHFT       |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |     /    | ` | ALT  |
+// |   ALT        |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |     /    | ` | ALT  |
 // \---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------/
-//                                   |  GUI   |   MO1   |   ENT   |       |  SPC  |   BKSP  |  CAPS   |
+//                                   |  GUI   | SPC/SHFT|   ESC   |       |  ENT  | SPC/SHFT|  CAPS   |
 //                                   \--------+---------+---------/       \-------+---------+---------/
 
                         bindings = <
-   &mt LGUI GRAVE   &kp Q   &kp W   &kp E     &kp R               &kp T             &kp Y         &kp U               &kp I        &kp O     &kp P      &kp LBKT
-   &mt LCTRL TAB    &kp A   &kp S   &kp D     &kp F               &kp G             &kp H         &kp J               &kp K        &kp L     &kp SEMI   &kp SQT
-   &kp LALT         &kp Z   &kp X   &kp C     &kp V               &kp B             &kp N         &kp M               &kp COMMA    &kp DOT   &kp FSLH   &mt RALT BSLH
-                                    &mo NUM   &mt LSHIFT SPACE    &lt SYM ESC       &lt SYM RET   &mt RSHIFT SPACE    &lt NUM BSPC
+   &mt LGUI GRAVE   &kp Q          &kp W   &kp E     &kp R        &kp T            &kp Y        &kp U       &kp I        &kp O     &kp P            &kp LBKT
+   &mt LCTRL TAB    &kp A          &kp S   &kp D     &kp F        &kp G            &kp H        &kp J       &kp K        &kp L     &kp SEMI         &kp SQT
+   &kp LALT         &mt LSHIFT Z   &kp X   &kp C     &kp V        &kp B            &kp N        &kp M       &kp COMMA    &kp DOT   &mt RSHIFT FSLH  &mt RALT BSLH
+                                           &mo NUM   &kp SPACE    &lt SYM ESC      &lt SYM RET  &kp SPACE   &lt NUM BSPC
                         >;
                 };
 
