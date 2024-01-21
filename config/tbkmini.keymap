@@ -29,7 +29,8 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS O>;
+    /delete-property/ ignore-modifiers;
+    continue-list = <UNDERSCORE MINUS Y>;
 };
 
 / {
