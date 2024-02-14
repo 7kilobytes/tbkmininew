@@ -61,6 +61,30 @@
             hold-trigger-key-positions = <L_KEYS THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
         };
+
+        rlm: right_row_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <L_KEYS THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
+
+        llm: left_row_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <R_KEYS THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
     };
 
   macros {
@@ -97,7 +121,7 @@
 
                         bindings = <
    &kp GRAVE   &lhm RALT Q  &kp W         &kp E         &kp R            &kp T            &kp Y    &kp U            &kp I         &kp O           &rhm RALT P     &kp LBKT
-   &kp CLCK    &lt SYM A    &lhm LALT S   &lhm LSFT D   &lhm LCTL F      &kp G            &kp H    &rhm RCTL J      &rhm RSFT K   &rhm LALT L     &lt SYM SEMI    &kp SQT
+   &kp CLCK    &llm SYM A   &lhm LALT S   &lhm LSFT D   &lhm LCTL F      &kp G            &kp H    &rhm RCTL J      &rhm RSFT K   &rhm LALT L     &rlm SYM SEMI   &kp SQT
    &kp LALT    &lhm LGUI Z  &kp X         &kp C         &kp V            &kp B            &kp N    &kp M            &kp COMMA     &kp DOT         &rhm LGUI FSLH  &kp BSLH
                                           &lt NUM TAB   &lhm LSFT SPACE  &lt NAV ESC      &kp RET  &rhm RSFT SPACE  &lt NUM BSPC
                         >;
