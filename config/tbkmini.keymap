@@ -87,30 +87,45 @@
 //                                   | NUM/TAB|   SPC   | NAV/ESC |       | NAV/ENT |   SPC   | NUM/BSPC|
 //                                   \--------+---------+---------/       \---------+---------+---------/
 
+//                         bindings = <
+//    &kp GRAVE   &lhm RALT Q   &kp W         &kp E         &kp R         &kp T            &kp Y    &kp U        &kp I         &kp O           &rhm RALT P     &kp LBKT
+//    &kp CLCK    &lt SYM A     &lhm LALT S   &lhm LSFT D   &lhm LCTL F   &kp G            &kp H    &rhm RCTL J  &rhm RSFT K   &rhm LALT L     &lt SYM SEMI    &kp SQT
+//    &kp LALT    &lhm LGUI Z   &kp X         &kp C         &kp V         &kp B            &kp N    &kp M        &kp COMMA     &kp DOT         &rhm LGUI FSLH  &kp BSLH
+//                                            &lt NUM TAB   &kp SPACE     &lt NAV ESC      &kp RET  &kp SPACE    &lt NUM BSPC
+//                         >;
+
+
                         bindings = <
-   &kp GRAVE   &lhm RALT Q   &kp W         &kp E         &kp R         &kp T            &kp Y    &kp U        &kp I         &kp O           &rhm RALT P     &kp LBKT
-   &kp CLCK    &lt SYM A     &lhm LALT S   &lhm LSFT D   &lhm LCTL F   &kp G            &kp H    &rhm RCTL J  &rhm RSFT K   &rhm LALT L     &lt SYM SEMI    &kp SQT
-   &kp LALT    &lhm LGUI Z   &kp X         &kp C         &kp V         &kp B            &kp N    &kp M        &kp COMMA     &kp DOT         &rhm LGUI FSLH  &kp BSLH
-                                           &lt NUM TAB   &kp SPACE     &lt NAV ESC      &kp RET  &kp SPACE    &lt NUM BSPC
+   &kp GRAVE   &lhm RALT Q  &kp W         &kp E         &kp R            &kp T            &kp Y    &kp U            &kp I         &kp O           &rhm RALT P     &kp LBKT
+   &kp CLCK    &lt SYM A    &lhm LALT S   &lhm LSFT D   &lhm LCTL F      &kp G            &kp H    &rhm RCTL J      &rhm RSFT K   &rhm LALT L     &lt SYM SEMI    &kp SQT
+   &kp LALT    &lhm LGUI Z  &kp X         &kp C         &kp V            &kp B            &kp N    &kp M            &kp COMMA     &kp DOT         &rhm LGUI FSLH  &kp BSLH
+                                          &lt NUM TAB   &lhm LSFT SPACE  &lt NAV ESC      &kp RET  &rhm RSFT SPACE  &lt NUM BSPC
                         >;
                 };
 
                 num_layer {
 // /--------------------------------------------------------------\       /-----------------------------------------------------------\
-// |              |    F12   |    F7  |   F8   |    F9   |    x   |       |   +   |    7    |    8    |    9    |     *    |          |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |              |    F11   |    F4  |   F5   |    F6   |    x   |       |   0   |    4    |    5    |    6    |     /    |          |
-// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
-// |              |    F10   |    F1  |   F2   |    F3   |    x   |       |   -   |    1    |    2    |    3    |     .    |          |
-// \---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------/
+// |              |    F12   |    F7  |   F8   |   F9   |    x    |       |   +   |    7    |    8    |    9    |     *    |          |
+// |--------------+----------+--------+--------+--------+---------|       |-------+---------+---------+---------+----------+----------|
+// |              |    F11   |    F1  |   F2   |   F3   |    x    |       |   0   |    1    |    2    |    3    |     /    |          |
+// |--------------+----------+--------+--------+--------+---------|       |-------+---------+---------+---------+----------+----------|
+// |              |    F10   |    F4  |   F5   |   F6   |    x    |       |   -   |    4    |    5    |    6    |     .    |          |
+// \----------------------------------+--------+--------+---------+       |-------+---------+---------+-------------------------------/
 //                                   |        |         |         |       |       |         |         |
 //                                   \--------+---------+---------/       \-------+---------+---------/
+//                         bindings = <
+//    &trans   &kp F12         &kp F7  &kp F8   &kp F9   &kp X            &kp PLUS    &kp N7    &kp N8   &kp N9    &kp ASTRK       &trans
+//    &trans   &kp F11         &kp F1  &kp F2   &kp F3   &kp X            &kp MINUS   &kp N4    &kp N5   &kp N6    &kp SLASH       &trans
+//    &trans   &mt LSHIFT F10  &kp F4  &kp F5   &kp F6   &kp X            &kp DOT     &kp N1    &kp N2   &kp N3    &mt RSHIFT N0   &trans
+//                                     &trans   &trans   &trans           &trans      &trans    &trans
+//                         >;
                         bindings = <
-   &trans   &kp F12         &kp F7  &kp F8   &kp F9   &kp X            &kp PLUS    &kp N7    &kp N8   &kp N9    &kp ASTRK       &trans
-   &trans   &kp F11         &kp F4  &kp F5   &kp F6   &kp X            &kp MINUS   &kp N4    &kp N5   &kp N6    &kp SLASH       &trans
-   &trans   &mt LSHIFT F10  &kp F1  &kp F2   &kp F3   &kp X            &kp DOT     &kp N1    &kp N2   &kp N3    &mt RSHIFT N0   &trans
-                                    &trans   &trans   &trans           &trans      &trans    &trans
+   &trans   &kp F12       &kp F7  &kp F8   &kp F9   &kp X            &kp PLUS    &kp N7    &kp N8   &kp N9    &kp ASTRK     &trans
+   &trans   &kp F11       &kp F1  &kp F2   &kp F3   &kp X            &kp N0      &kp N1    &kp N2   &kp N3    &kp SLASH     &trans
+   &trans   &mt LSFT F10  &kp F4  &kp F5   &kp F6   &kp X            &kp MINUS   &kp N4    &kp N5   &kp N6    &mt RSFT DOT  &trans
+                                  &trans   &trans   &trans           &trans      &trans    &trans
                         >;
+
                 };
 
                 sym_layer {
