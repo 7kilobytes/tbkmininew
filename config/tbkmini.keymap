@@ -111,14 +111,6 @@
 //                                   | NUM/TAB|   SPC   | NAV/ESC |       | NAV/ENT |   SPC   | NUM/BSPC|
 //                                   \--------+---------+---------/       \---------+---------+---------/
 
-//                         bindings = <
-//    &kp GRAVE   &lhm RALT Q   &kp W         &kp E         &kp R         &kp T            &kp Y    &kp U        &kp I         &kp O           &rhm RALT P     &kp LBKT
-//    &kp CLCK    &lt SYM A     &lhm LALT S   &lhm LSFT D   &lhm LCTL F   &kp G            &kp H    &rhm RCTL J  &rhm RSFT K   &rhm LALT L     &lt SYM SEMI    &kp SQT
-//    &kp LALT    &lhm LGUI Z   &kp X         &kp C         &kp V         &kp B            &kp N    &kp M        &kp COMMA     &kp DOT         &rhm LGUI FSLH  &kp BSLH
-//                                            &lt NUM TAB   &kp SPACE     &lt NAV ESC      &kp RET  &kp SPACE    &lt NUM BSPC
-//                         >;
-
-
                         bindings = <
    &kp GRAVE   &lhm RALT Q  &kp W         &kp E         &kp R            &kp T            &kp Y    &kp U            &kp I         &kp O           &rhm RALT P     &kp LBKT
    &kp CLCK    &llm SYM A   &lhm LALT S   &lhm LSFT D   &lhm LCTL F      &kp G            &kp H    &rhm RCTL J      &rhm RSFT K   &rhm LALT L     &rlm SYM SEMI   &kp SQT
@@ -129,25 +121,20 @@
 
                 num_layer {
 // /--------------------------------------------------------------\       /-----------------------------------------------------------\
-// |              |    F12   |    F7  |   F8   |   F9   |    x    |       |   +   |    7    |    8    |    9    |     *    |          |
+// |              |    F12   |    F7  |   F8   |   F9   |         |       |   +   |    7    |    8    |    9    |     *    |          |
 // |--------------+----------+--------+--------+--------+---------|       |-------+---------+---------+---------+----------+----------|
-// |              |    F11   |    F1  |   F2   |   F3   |    x    |       |   0   |    1    |    2    |    3    |     /    |          |
+// |              |    F11   |    F1  |   F2   |   F3   |         |       |   0   |    1    |    2    |    3    |     /    |          |
 // |--------------+----------+--------+--------+--------+---------|       |-------+---------+---------+---------+----------+----------|
-// |              |    F10   |    F4  |   F5   |   F6   |    x    |       |   -   |    4    |    5    |    6    |     .    |          |
+// |              |    F10   |    F4  |   F5   |   F6   |         |       |   -   |    4    |    5    |    6    |     .    |          |
 // \----------------------------------+--------+--------+---------+       |-------+---------+---------+-------------------------------/
 //                                   |        |         |         |       |       |         |         |
 //                                   \--------+---------+---------/       \-------+---------+---------/
-//                         bindings = <
-//    &trans   &kp F12         &kp F7  &kp F8   &kp F9   &kp X            &kp PLUS    &kp N7    &kp N8   &kp N9    &kp ASTRK       &trans
-//    &trans   &kp F11         &kp F1  &kp F2   &kp F3   &kp X            &kp MINUS   &kp N4    &kp N5   &kp N6    &kp SLASH       &trans
-//    &trans   &mt LSHIFT F10  &kp F4  &kp F5   &kp F6   &kp X            &kp DOT     &kp N1    &kp N2   &kp N3    &mt RSHIFT N0   &trans
-//                                     &trans   &trans   &trans           &trans      &trans    &trans
-//                         >;
+
                         bindings = <
-   &trans   &kp F12       &kp F7  &kp F8   &kp F9   &kp X            &kp PLUS    &kp N7    &kp N8   &kp N9    &kp ASTRK     &trans
-   &trans   &kp F11       &kp F1  &kp F2   &kp F3   &kp X            &kp N0      &kp N1    &kp N2   &kp N3    &kp SLASH     &trans
-   &trans   &mt LSFT F10  &kp F4  &kp F5   &kp F6   &kp X            &kp MINUS   &kp N4    &kp N5   &kp N6    &mt RSFT DOT  &trans
-                                  &trans   &trans   &trans           &trans      &trans    &trans
+   &trans   &lhm RALT F12  &kp F7        &kp F8         &kp F9         &none            &kp PLUS    &kp N7          &kp N8         &kp N9          &kp ASTRK     &trans
+   &trans   &kp F11        &lhm LALT F1  &lhm LSFT F2   &lhm LCTL F3   &none            &kp N0      &rhm RCTL N1    &rhm RSFT N2   &rhm LALT N3    &kp SLASH     &trans
+   &trans   &lhm LGUI F10  &kp F4        &kp F5         &kp F6         &none            &kp MINUS   &kp N4          &kp N5         &kp N6          &kp DOT       &trans
+                                         &trans         &trans         &trans           &trans      &trans          &trans
                         >;
 
                 };
@@ -183,7 +170,7 @@
 //                             \--------+---------+---------/       \--------+--------+---------/
 
                         bindings = <
-   &none   &bt BT_CLR    &none         &none         &none          &kp C_BRI_UP          &kp LC(LEFT)  &kp C_VOL_UP  &kp C_VOL_DN  &kp LC(RIGHT)  &kp C_MUTE   &none
+   &none   &bt BT_CLR    &none         &none         &none          &kp C_BRI_UP          &kp LC(LEFT)  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(RIGHT)  &kp C_MUTE   &none
    &none   &trans        &trans        &trans        &trans         &kp C_BRI_DN          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT      &kp INS      &none
    &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &none                 &caps_word    &kp PG_DN     &kp PG_UP     &kp HOME       &kp END      &none
                                        &trans        &trans         &trans                &trans        &trans        &trans
